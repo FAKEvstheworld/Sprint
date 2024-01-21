@@ -1,21 +1,16 @@
 package lesson_1
 
+const val MINUTES_IN_A_HOUR = 60
+const val SECONDS_IN_A_MINUTE = 60
+const val SECONDS_IN_A_HOUR = 3600
+
 fun main(){
+
     var allSeconds: Int = 6485
-    var hours = allSeconds/60/60
-    var minutes = allSeconds/60%60
-    var seconds = allSeconds%60
+    var hours = allSeconds/SECONDS_IN_A_HOUR // кол-во целых часов (1)
+    var minutes = allSeconds/MINUTES_IN_A_HOUR%MINUTES_IN_A_HOUR // кол-во целых минут после часа (48)
+    var seconds = allSeconds%SECONDS_IN_A_MINUTE // кол-во целых секунд после минут (5)
 
-    val h = length(hours)
-    val m = length(minutes)
-    val s = length(seconds)
+    println("%02d:%02d:%02d".format(hours, minutes, seconds))
 
-    println("Времени в космосе проведено: $h:$m:$s")
-
-}
-fun length(number: Int): String {
-    var n = number.toString()
-    if (number<10) n = "0$number"
-    else n = number.toString()
-    return n
 }
