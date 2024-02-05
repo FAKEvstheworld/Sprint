@@ -11,5 +11,5 @@ fun main() {
     val availableTom = tableCount != reservedTableTom
 
     println("Доступность столиков на сегодня: $availableToday\nДоступность столиков на завтра: $availableTom")
-
+//
 }
