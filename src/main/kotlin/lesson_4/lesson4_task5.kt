@@ -1,23 +1,30 @@
 package lesson_4
 
-const val peopleCountMin = 55
-const val peopleCountMax = 70
-const val boxNeeds = 50
+const val PEOPLE_COUNT_MIN = 55
+const val PEOPLE_COUNT_MAX = 70
+const val BOX_NEEDS = 50
 
 fun main() {
 
     println("Повреждён ли корабль? true/false")
-    val shipDamage = readln().toBoolean()
+
+    val isDamaged = readln().toBoolean()
+
     println("Количество экипажа: ")
+
     val peopleCount = readln().toInt()
+
     println("Количество ящиков с провизией: ")
+
     val boxCount = readln().toInt()
+
     println("Благоприятная ли погода? true/false")
-    val weatherFine = readln().toBoolean()
+
+    val isWeatherFine = readln().toBoolean()
 
     val voyage =
-        (shipDamage == false) && (peopleCount > peopleCountMin) && (peopleCount < peopleCountMax) && (boxCount > boxNeeds) ||
-                (shipDamage == true) && (peopleCount == peopleCountMax) && (boxCount > boxNeeds) && (weatherFine == true)
+        (isDamaged == false) && (peopleCount > PEOPLE_COUNT_MIN) && (peopleCount < PEOPLE_COUNT_MAX) && (boxCount > BOX_NEEDS) ||
+                (isDamaged == true) && (peopleCount == PEOPLE_COUNT_MAX) && (boxCount > BOX_NEEDS) && (isWeatherFine == true)
 
     println("Корабль может плыть: $voyage")
 
