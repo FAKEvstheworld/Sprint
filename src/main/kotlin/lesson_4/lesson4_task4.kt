@@ -2,19 +2,14 @@ package lesson_4
 
 fun main() {
 
-    val day = 5
+    val day = 6
 
-    val checkParity = (day%2 != 0) // 1, 3, 5 - true
-
-    val handExercises = checkParity
-    val absExercises = checkParity
-    val legExercises = !checkParity
-    val backExercises = !checkParity
+    val isEven = (day%2 != 0) // 1, 3, 5 - true
 
     println("""
-Упражнения для рук: $handExercises
-Упражнения для ног: $legExercises
-Упражнения для спины: $backExercises
-Упражнения для пресса: $absExercises""")
+Упражнения для рук: ${isEven}
+Упражнения для ног: ${!isEven}
+Упражнения для спины: ${!isEven}
+Упражнения для пресса: ${isEven}""")
 
 }
