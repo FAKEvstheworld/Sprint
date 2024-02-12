@@ -4,14 +4,12 @@ fun main() {
 
     println("Введите кол-во секунд для запуска таймера:")
 
-    val seconds = readln().toInt()
-    var timer = seconds
+    val seconds = readln().toLong()
 
-    while (timer >= 0){
-        if (timer == 0) println("Прошло $seconds секунд")
-        else println("Осталось $timer секунд")
-        timer--
-        Thread.sleep(1000)
-    }
+    println("Таймер запущен")
+
+    Thread.sleep(1000*seconds)
+
+    println("Прошло $seconds секунд")
 
 }
