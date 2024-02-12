@@ -4,9 +4,8 @@ fun main() {
 
     val login = "FAKE"
     val password = "12345"
-    var isAuth = false
 
-    while (isAuth == false){
+    do {
 
         println("Введите логин: ")
 
@@ -17,11 +16,10 @@ fun main() {
         val inputPass = readln()
 
         if ((inputLogin == login) && (inputPass == password)){
-            isAuth = true
             println("Авторизация прошла успешно")
         }
         else println("Попробуйте еще раз")
 
-    }
+    } while ((inputLogin != login) || (inputPass != password))
 
 }
